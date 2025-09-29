@@ -4,10 +4,10 @@ import styles from "./MovieGrid.module.css";
 
 type Props = {
   movies: Movie[];
-  onImageClick: (movie: Movie) => void;
+  onSelect: (movie: Movie) => void;
 };
 
-export default function MovieGrid({ movies, onImageClick }: Props) {
+export default function MovieGrid({ movies, onSelect }: Props) {
   return (
     <ul className={styles.grid}>
       {movies.map((movie) => (
@@ -18,7 +18,7 @@ export default function MovieGrid({ movies, onImageClick }: Props) {
               src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
               alt={movie.title}
               loading="lazy"
-              onClick={() => onImageClick(movie)}
+              onClick={() => onSelect(movie)}
             />
             <h2 className={styles.title}>{movie.title}</h2>
           </div>

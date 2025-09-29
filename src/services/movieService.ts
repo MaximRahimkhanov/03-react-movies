@@ -1,8 +1,7 @@
 import axios from "axios";
 import type { Movie } from "../types/movie";
 
-const VITE_TMDB_TOKEN =
-  "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZmE0ODc4YWExNmI3OWVlNGY3Y2VmNGNkNmExMmU1ZiIsIm5iZiI6MTc1OTA1NDkzNC4zNTIsInN1YiI6IjY4ZDkwYzU2Y2JjYzRjNWFiYTM4YmI3ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DfHYjfcAJyK5wEPG5sCVO6eKHYIxrVxZAS3wA2-qKg4";
+const VITE_TMDB_TOKEN = import.meta.env.VITE_TMDB_TOKEN as string;
 
 type ResponseData = {
   page: number;

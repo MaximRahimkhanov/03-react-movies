@@ -55,7 +55,7 @@ function App() {
         <ErrorMessage />
       ) : (
         movies.length > 0 && (
-          <MovieGrid movies={movies} onImageClick={handleImageClick} />
+          <MovieGrid movies={movies} onSelect={handleImageClick} />
         )
       )}
 
